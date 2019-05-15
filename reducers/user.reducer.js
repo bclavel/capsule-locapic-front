@@ -9,7 +9,7 @@ export default function(userData = {}, action) {
       firstName : action.firstName,
       lastName : action.lastName,
       email : action.email,
-      id : action.userId,
+      facebookId : action.userId,
     };
 
       return userCopy;

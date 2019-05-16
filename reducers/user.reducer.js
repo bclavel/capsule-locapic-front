@@ -10,6 +10,7 @@ export default function(userData = {}, action) {
       lastName : action.lastName,
       email : action.email,
       facebookId : action.userId,
+      picture : action.picture
     };
 
       return userCopy;

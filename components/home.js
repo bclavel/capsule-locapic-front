@@ -25,8 +25,8 @@ class HomeScreen extends React.Component {
    });
 
    if (result.type == 'success') {
-     this.props.handleUserValid(result.params.firstName, result.params.lastName, result.params.email, result.params.userId)
-     this.props.navigation.navigate('PageA')
+     this.props.handleUserValid(result.params.firstName, result.params.lastName, result.params.email, result.params.userId, result.params.picture)
+     this.props.navigation.navigate('PageB')
    }
 
   console.log('HOME - result handleSubmit >>', result);
@@ -49,13 +49,14 @@ const styles = StyleSheet.create({
 function mapDispatchToProps(dispatch) {
   console.log('Dispatch Home >>', dispatch);
  return {
-  handleUserValid : function(firstNameUser, lastNameUser, emailUser, idUser) {
+  handleUserValid : function(firstNameUser, lastNameUser, emailUser, idUser, pictureUser) {
     dispatch( {
       type: 'signin',
       firstName : firstNameUser,
       lastName : lastNameUser,
       email : emailUser,
-      userId : idUser
+      userId : idUser,
+      picture : pictureUser
     })
   }
  }

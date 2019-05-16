@@ -65,10 +65,6 @@ class PageA extends React.Component {
         })
   }
 
-  handleDisplayHistorique() {
-
-  }
-
   onMapLayout = () => {
     this.setState({ isMapReady: true });
   }
@@ -96,8 +92,7 @@ class PageA extends React.Component {
         style={{
             position: 'absolute',//use absolute position to show button on top of the map
             top: '90%',
-            left: '40%',
-            alignSelf: 'flex-end' //for align to right
+            alignSelf: 'center' //for align to right
         }}
         >
       <Button large title="Historique" backgroundColor='#3498db' textStyle={styles.homeBtn} containerViewStyle={{margin: 20}} onPress={() => this.setState({displayHistorique : !this.state.displayHistorique})} />
